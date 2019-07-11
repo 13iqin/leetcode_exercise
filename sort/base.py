@@ -24,12 +24,14 @@ def insertSort(array, n):
     for i in range(1, n):
         value = array[i]
         j = i - 1
-        for j in reversed(range(j + 1)):
+        for j in reversed(range(-1, j + 1)):
+            print(j)
             if array[j] > value:
                 array[j + 1] = array[j]
             else:
                 break
         array[j + 1] = value
+
     return array
 
 
