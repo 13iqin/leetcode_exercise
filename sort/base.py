@@ -39,8 +39,9 @@ def selectSort(array, n):
     if n <= 1:
         return array
     for i in range(n):
-        min_value = min(array[i:])
-        array[i] = min_value
+        min_value_index = array.index(min(array[i:]))
+        array[i],array[min_value_index] = array[min_value_index],array[i]
+        print(array)
     return array
 
 
