@@ -41,7 +41,6 @@ def selectSort(array, n):
     for i in range(n):
         min_value_index = array.index(min(array[i:]))
         array[i],array[min_value_index] = array[min_value_index],array[i]
-        print(array)
     return array
 
 
@@ -73,7 +72,7 @@ def merge(A, p, q, r):
         k += 1
         start += 1
 
-    for i in range(r - p):
+    for i in range(r - p + 1):
         A[p + i] = tmp[i]
 
 
